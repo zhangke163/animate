@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3D动画1</title>
+	<style>
+		.circle{
+			width:300px;
+			height: 300px;
+			position:fixed;
+			left:0;
+			bottom:0;
+			right:0;
+			top:0;
+			margin:auto;
+			border-top:20px solid yellow;
+			border-left: 20px solid pink;
+			border-bottom:20px solid pink;
+			border-right: 20px solid yellow;
+			border-radius: 50%;
+			transition:transform 1s linear;
+		}
+		.innercircle{
+			width:300px;
+			height: 300px;
+			border-radius: 50%;
+			overflow: hidden;
+		}
+		.innercircle>img{
+			height: 300px;
+		}
+		.zhezhao{
+			width:300px;
+			height: 300px;
+			position: absolute;
+			left: 0;
+			top:0;
+			background: rgba(0,0,0,0.5);
+			border-radius: 50%;
+			line-height: 300px;
+			text-align: center;
+			z-index: 10;
+			color:#fff;
+			display: none;
+		} 
+		.circle a{     /*重点*/
+			display: block;
+			transition:all 1s linear;
+			position: relative;
+		}
+		.circle:hover a{
+			transform:rotate(-180deg);
+		}
+		.circle:hover{
+			transform:rotate(180deg);
+		}
+		.circle:hover a>.zhezhao{
+			display:block;
+		}
+	</style>
+</head>
+<body>
+	<div class="circle">
+		<a href="">
+			<div class="innercircle"><img src="1.jpg" alt=""></div>
+			<div class="zhezhao">
+				张可可
+			</div>
+		</a>
+		
+	</div>
+</body>
+</html>
